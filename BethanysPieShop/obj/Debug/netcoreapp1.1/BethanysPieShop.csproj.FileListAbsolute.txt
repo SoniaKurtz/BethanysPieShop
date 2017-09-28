@@ -1,0 +1,11 @@
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\bin\Debug\netcoreapp1.1\BethanysPieShop.deps.json
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\bin\Debug\netcoreapp1.1\BethanysPieShop.runtimeconfig.json
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\bin\Debug\netcoreapp1.1\BethanysPieShop.runtimeconfig.dev.json
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\bin\Debug\netcoreapp1.1\BethanysPieShop.dll
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\bin\Debug\netcoreapp1.1\BethanysPieShop.pdb
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\obj\Debug\netcoreapp1.1\BethanysPieShop.csprojResolveAssemblyReference.cache
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\obj\Debug\netcoreapp1.1\BethanysPieShop.csproj.CoreCompileInputs.cache
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\obj\Debug\netcoreapp1.1\BethanysPieShop.AssemblyInfoInputs.cache
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\obj\Debug\netcoreapp1.1\BethanysPieShop.AssemblyInfo.cs
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\obj\Debug\netcoreapp1.1\BethanysPieShop.dll
+C:\Users\Sonia\Documents\GitHub\BethanysPieShop\BethanysPieShop\obj\Debug\netcoreapp1.1\BethanysPieShop.pdb
