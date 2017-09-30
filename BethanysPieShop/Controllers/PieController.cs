@@ -11,8 +11,8 @@ namespace BethanysPieShop.Controllers
 
         public PieController(IPieRepository pieRepository, ICategoryRepository categoryRepository)
         {
-            pieRepository = _pieRepository;
-            categoryRepository = _categoryRepository;
+            _pieRepository = pieRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public ViewResult List()

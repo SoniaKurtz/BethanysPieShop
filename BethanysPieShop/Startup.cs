@@ -10,8 +10,8 @@ namespace BethanysPieShop
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
             services.AddTransient<IPieRepository, MockPieRepository>();
+            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
             services.AddMvc();
         }
 
