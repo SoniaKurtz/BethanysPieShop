@@ -1,6 +1,8 @@
 ﻿using BethanysPieShop.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -8,10 +10,21 @@ namespace BethanysPieShop
 {
     public class Startup
     {
+        private IConfigurationRoot _configurationRoot;
+
+        public Startup(IHostingEnvironment hostingEnvironment)
+        {
+            _configurationRoot = new ConfigurationBuilder()
+                .SetBasePath(hostingEnvironment.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .Build();
+        }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IPieRepository, MockPieRepository>();
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            services.AddDbContext<AppDbContext>(options => 
+                                    options.UseSqlServer(_configurationRoot.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IPieRepository, PieRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddMvc();
         }
 
@@ -21,6 +34,8 @@ namespace BethanysPieShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+
+            DbInitializer.Seed(app);
         }
     }
 }
