@@ -28,6 +28,8 @@ namespace BethanysPieShop
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+            services.AddTransient<IOrderRepository, OrderRepository>();
+
             services.AddMvc();
 
             services.AddMemoryCache();
