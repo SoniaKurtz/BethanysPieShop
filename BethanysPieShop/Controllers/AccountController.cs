@@ -12,7 +12,8 @@ namespace BethanysPieShop.Controllers
 
         private readonly SignInManager<IdentityUser> _signInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -47,9 +48,9 @@ namespace BethanysPieShop.Controllers
             }
 
             ModelState.AddModelError("", "Username/password not found");
-
             return View(loginViewModel);
         }
+
 
         public IActionResult Register()
         {
@@ -78,7 +79,6 @@ namespace BethanysPieShop.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-
             return RedirectToAction("Index", "Home");
         }
     }
